@@ -1,2 +1,2 @@
 # AlderStoresWordsOfMagic.github.io
-College website project
+College website projects.
