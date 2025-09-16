@@ -49,14 +49,10 @@ html {
 /* Link formatting */
 
 a {
-    text-decoration: none;
-    color: #18754A;
+    text-decoration: underline;
+    color: #2B303A;
 }
 a:hover {
-    text-decoration: underline;
-    color: #F79256;
-}
-a:visited {
     color: #F79256;
 }
 
@@ -84,7 +80,7 @@ h3 {
 }
 
 #box1 { /* See text in boxes for intended purpose */
-    background-color: #76B960; /* "Mantis" */
+    background-color: #A7DE73; /* "Mantis," recently lightened slightly */
     color: #000000;
 }
 #box2 {
@@ -112,14 +108,19 @@ h3 {
     background-color: #2B303A;
     color: #FFFFFF;
     padding: 16px 24px;
-    font-size: 20px;
+    font-size: 32px;
     cursor: pointer;
-    display: inline-block;
+    display: block;
 }
 .button:hover {background: #F79256;}
 .button:active {
-    background: #F4DBD8;
-    color: #F4DBD8;
+    background: #FFFFFF;
+    color: #FFFFFF;
+}
+
+.button-center {
+    width: 50%;
+    margin: 4px auto;
 }
 
 
@@ -177,13 +178,36 @@ font-weight: bold;
     background-color: white;
     color: black;
 }
+.bg-light a {
+    text-decoration: underline;
+    color: #2B303A;
+}
+.bg-light a:hover {
+    color: #F79256;
+}
+
 .bg-dark {
     background-color: #2B303A;
     color: white;
 }
+.bg-dark a {
+    text-decoration: underline;
+    color: #F4DBD8;
+}
+.bg-dark a:hover {
+    color: #F79256;
+}
+
 .bg-lightgreen {
-    background-color: #76B960;
+    background-color: #A7DE73;
     color: black;
+}
+.bg-lightgreen a {
+    text-decoration: underline;
+    color: #18754A;
+}
+.bg-lightgreen a:hover {
+    color: white;
 }
 
 .column-container {
@@ -193,4 +217,12 @@ font-weight: bold;
     width: 50%;
     float: left;
     /* display: block; */
+    padding: 24px 24px;
+}
+
+.center-box {
+    display: block;
+    text-align: center;
+    margin: auto;
+    max-width: 80%;
 }
