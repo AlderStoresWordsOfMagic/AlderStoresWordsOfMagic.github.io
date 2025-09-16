@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Format Test</title>
+    <link rel="stylesheet" href="flexbox_test.css">
+</head>
+<body>
+    <div class="card">
+        <div class="card-header">
+            <h3>Community Garden Project</h3>
+            <button class="expand-btn" aria-label="Expand Card">+</button>
+        </div>
+        <div class="card-content">
+            <p class="summary">Join neighbors in creating a shared growing space...</p>
+            <div class="details hidden">
+                <p>Meeting every Saturday at 10am. Tools provided. All skill levels welcome.</p>
+                <p>Contact: garden@community.org</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let info = false;
+
+        const expandBtn = document.querySelector('.expand-btn');
+        const details = document.querySelector('.card-content');
+
+        // Your code here
+        expandBtn.addEventListener('click', showInfo);
+
+        function showInfo() {
+            details.style.display = (info) ? "none" : "block"; // TERNARY OPERATORS WOOO
+            expandBtn.ariaLabel = (info) ? "Expand Card" : "Collapse Card";
+            expandBtn.textContent = (info) ? "+" : "-";
+            info = !info;
+        }
+    </script>
+</body>
+</html>

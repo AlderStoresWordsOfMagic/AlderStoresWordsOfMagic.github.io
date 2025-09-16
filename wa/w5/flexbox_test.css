@@ -1,0 +1,24 @@
+.card-header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+
+.expand-btn { /* JavaScript handles visuals */
+    border-radius: 10%;
+    border-width: 3px;
+    width: 200px;
+    height: 30px;
+    margin: auto;
+}
+.expand-btn:hover {
+    border-color: crimson;
+}
+.expand-btn:active {
+    background-color: crimson;
+}
+
+.card-content {
+    display: none;
+}
