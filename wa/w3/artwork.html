@@ -7,12 +7,11 @@
     <link rel="stylesheet" href="w4style.css">
 </head>
 <body>
-    <nav>
-        <h3>NAVIGATION</h3>
+    <nav class="navbar">
         <a href="home.html">Home</a>
         <a href="aboutme.html">About Me</a>
         <a href="projects.html">Projects</a>
-        <a href="artwork.html">Artwork</a>
+        <a class="current" href="artwork.html">Artwork</a>
         <a href="presence.html">Contact Me</a>
     </nav>
 
@@ -20,20 +19,22 @@
         <h1>Artwork</h1>
         <p>Here you will find a collection of all of my artwork. Interactive dropdowns and subpages will replace this horrendous format in the future.</p>
     </header>
+ 
+    <div class="column-container">
+        <section class="column-box bg-lightgreen align-text-center">
+            <h2>Traditional</h2>
+            <img src="../images/w3/sleepy.jpg" width="300px" alt="A sketched image of a large caterpillar, laying on a bus seat.">
+        </section>
 
-    <section>
-        <h2>Traditional</h2>
-        <img src="../images/w3/sleepy.jpg" width="300px" alt="A sketched image of a large caterpillar, laying on a bus seat.">
-    </section>
+        <section class="column-box bg-dark align-text-center">
+            <h2>Digital</h2>
+            <img src="../images/w3/caterpillar_edit.png" width="300px" alt="A pixel-art image of a large green caterpillar, waving at the camera.">
+        </section>
 
-    <section>
-        <h2>Digital</h2>
-        <img src="../images/w3/caterpillar_edit.png" width="300px" alt="A pixel-art image of a large green caterpillar, waving at the camera.">
-    </section>
-
-    <section>
-        <h2>From Others</h2>
-        <img src="../images/w3/stare.jpg" width="300px" alt="A sketched image of a large caterpillar, staring down at a small slice of cake. A birthday gift!">
-    </section>
+        <section class="column-box bg-light align-text-center">
+            <h2>From Others</h2>
+            <img src="../images/w3/stare.jpg" width="300px" alt="A sketched image of a large caterpillar, staring down at a small slice of cake. A birthday gift!">
+        </section>
+    </div>
 </body>
 </html>

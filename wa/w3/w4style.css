@@ -3,6 +3,10 @@
     flex-direction: row;
 }
 
+body {
+    background-color: #F4DBD8;
+}
+
 
 /* Baseline headers and text */
 h1, h2, h3 {
@@ -14,12 +18,16 @@ h1, h2, h3 {
         "wdth" 100;
 }
 
+h1 {
+    text-align: center;
+}
+
 html {
     font-family: "Lexend", sans-serif;
     font-optical-sizing: auto;
     font-weight: 320;
     font-style: normal;
-    font-size: 14px;
+    font-size: 20px;
 }
 
 .fancy { /* Will be used in the future for titles and specific elements */
@@ -31,6 +39,10 @@ html {
 
 .small-text {
     font-size: 10px;
+}
+
+.align-text-center {
+    text-align: center;
 }
 
 
@@ -49,17 +61,17 @@ a:visited {
 }
 
 
-/* Each heading scale upgrade is +6px larger than the previous */
+/* Each heading scale upgrade is +12px larger than the previous */
 h1 {
-    font-size: 32px;
+    font-size: 64px;
     font-weight: bold;
 }
 h2 {
-    font-size: 26px;
+    font-size: 52px;
     font-weight: bold;
 }
 h3 {
-    font-size: 20px;
+    font-size: 40px;
     font-weight: bold;
 }
 
@@ -132,4 +144,53 @@ input[type=text] {
 }
 input[type=text]:focus {
 border: 4px solid #F79256;
+}
+
+
+
+/* Post-W4 Update */
+
+.navbar {
+    background-color: #18754A;
+    display: flex;
+    flex-direction: row;
+}
+
+.navbar a {
+text-decoration: none;
+color: white;
+padding: 16px 16px;
+font-size: 20px;
+font-weight: bold;
+}
+.navbar a:hover {
+    background-color: #F79256;
+}
+.navbar a:active {
+    background-color: white;
+}
+.navbar a.current { /* Custom system for current page. */
+    background-color: #F79256;
+}
+
+.bg-light {
+    background-color: white;
+    color: black;
+}
+.bg-dark {
+    background-color: #2B303A;
+    color: white;
+}
+.bg-lightgreen {
+    background-color: #76B960;
+    color: black;
+}
+
+.column-container {
+    display: flex;
+}
+.column-box {
+    width: 50%;
+    float: left;
+    /* display: block; */
 }

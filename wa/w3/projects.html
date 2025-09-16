@@ -7,11 +7,10 @@
     <link rel="stylesheet" href="w4style.css">
 </head>
 <body>
-    <nav>
-        <h3>NAVIGATION</h3>
+    <nav class="navbar">
         <a href="home.html">Home</a>
         <a href="aboutme.html">About Me</a>
-        <a href="projects.html">Projects</a>
+        <a class="current" href="projects.html">Projects</a>
         <a href="artwork.html">Artwork</a>
         <a href="presence.html">Contact Me</a>
     </nav>
@@ -20,8 +19,9 @@
         <h1>Projects</h1>
     </header>
 
-    <section>
-        <h2>Hobby</h2>
+    <div class="column-container">
+        <section class="column-box bg-light">
+            <h2>Hobby</h2>
             <h3>Game Development</h3>
             <p>My primary project, as of the writing of this paragraph, is modding the game <a href="https://store.steampowered.com/app/212680/FTL_Faster_Than_Light/"><i>FTL: Faster Than Light.</i></a> I have plans to learn further game devlopment alongside my academic path.</p>
 
@@ -33,10 +33,10 @@
 
             <h3>Music</h3>
             <p>I listen to a lot of music to keep myself stable, and I have begun to create music as well. I am planning to take drum lessons, and have learned the basics of sound synthesis thanks to a course I recently took.</p>
-    </section>
+        </section>
 
-    <section>
-        <h2>Academics</h2>
+        <section class="column-box bg-dark">
+            <h2>Academics</h2>
             <h3>UI/UX</h3>
             <p>The primary focus of my degree course, and a major component of many things I am interested in. An artistic experience, video game, or useful machine is no good if it doesn't feel good to use.</p>
 
@@ -45,6 +45,7 @@
 
             <h3>Astronomy</h3>
             <p>Space, and the many absurd things that lie within its infinite depths, have always been a major inspiration to me. Space is a source of wonder. Whenever I look up into the night sky, it always makes me question what there may be out there that we have yet to discover. Needless to say, it's not just fun, but also great writing fuel.</p>
-    </section>
+        </section>
+    </div>
 </body>
 </html>
