@@ -1,0 +1,135 @@
+html {
+    font-family: "Helvetica", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 50;
+    font-style: normal;
+    font-size: 20px;
+
+    background-color: #A2A4A3;
+}
+
+
+.navbar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: black;
+}
+
+
+.navbar-logo {
+    display: block;
+    position: relative;
+}
+
+
+.navbar-main {
+    background-color: black;
+    color: white;
+    display: flex;
+}
+.navbar-main a:not(.navbar-logo) {
+    text-decoration: none;
+    color: white;
+    padding: 32px 16px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.navbar-main a:has(.navbar-logo) {
+    text-decoration: none;
+    color: white;
+    padding: 0;
+    font-size: 20px;
+    font-weight: bold;
+}
+.navbar-main a:hover {
+    background-color: #CFB87C;
+    color: black;
+}
+
+
+.navbar-button {
+    display: none;
+    border: 0px;
+    background-color: black;
+    color: white;
+    padding: 16px 16px;
+    font-size: 32px;
+    position: fixed;
+}
+
+
+.navbar-menu {
+    background-color: #CFB87C;
+    color: black;
+    position: relative;
+    top: 74px;
+    width: 100%;
+    align-self: center;
+    align-items: center;
+    flex-direction: column;
+}
+.navbar-menu.show {
+    display: flex;
+}
+.navbar-menu:not(.show) {
+    display: none;
+}
+
+.navbar-menu a {
+    text-decoration: none;
+    color: black;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    padding: 16px 16px;
+}
+
+
+.hamburger {
+    display: none;
+    background-color: #CFB87C;
+    justify-content: right;
+    align-content: right;
+    height: 6px;
+    width: 32px;
+    padding: 0;
+    margin: 6px;
+}
+.x:nth-of-type(1) {
+  transition: all 300ms ease-in-out;
+  transform: rotate(45deg);
+  transform-origin: top left;
+  width: 36px;
+}
+.x:nth-of-type(2) {
+  transition: all 300ms ease-in-out;
+  transform-origin: center;
+  width: 0;
+}
+.x:nth-of-type(3) {
+  transition: all 300ms ease-in-out;
+  transform: rotate(-45deg);
+  transform-origin: bottom left;
+  width: 36px;
+}
+
+
+@media screen and (max-width: 583px) { /* Handles toggling of PC and mobile menus based on screen width */
+    .navbar-main {
+        display: none;
+    }
+
+    .navbar-logo {
+        display: none;
+    }
+
+    .navbar-button {
+        display: block;
+    }
+
+    .hamburger {
+        display: block;
+    }
+}
