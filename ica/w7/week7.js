@@ -43,12 +43,14 @@ filterPastEvents.addEventListener('input', displayPastEvents)
 
 // Form data persistence
 
-// Save form data as user types
+// Save form data as user updates form (Option D)
 document.getElementById('grid-layout-events-past-filter').addEventListener('input', function(e) {
-    localStorage.setItem('formData', JSON.stringify({
-        [e.target.name]: e.target.value
-    }));
+    localStorage.setItem('formData', JSON.stringify({"formDataVal": e.target.value}));
 });
 
 // Restore form data on page load
-const savedData = JSON.parse(localStorage.getItem('formData') || '{}');
+filterPastEvents.value = JSON.parse(localStorage.getItem('formData')).formDataVal;
+displayPastEvents() // Auto-refresh shown divs, since the function is normally only run on input
+
+// This data is necessary because a quality-of-life function of the site would not work without it. It has no personal ties.
+// Users can control it to an absolute degree, as it is a basic number box with no limits outside of dates beyond the club's formation.
