@@ -37,3 +37,18 @@ function displayPastEvents() {
     });
 }
 filterPastEvents.addEventListener('input', displayPastEvents)
+
+
+
+
+// Form data persistence
+
+// Save form data as user types
+document.getElementById('grid-layout-events-past-filter').addEventListener('input', function(e) {
+    localStorage.setItem('formData', JSON.stringify({
+        [e.target.name]: e.target.value
+    }));
+});
+
+// Restore form data on page load
+const savedData = JSON.parse(localStorage.getItem('formData') || '{}');
