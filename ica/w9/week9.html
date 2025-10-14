@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Micro-Interaction Test</title>
+    <style>
+        .box {
+            position: relative;
+
+            height: 200px;
+            width: 200px;
+
+            border: 4px solid black;
+            background-color: #CFB87C;
+
+            animation-name: moving-box;
+            animation-duration: 3s;
+            animation-iteration-count: infinite;
+            animation-timing-function: ease-out;
+        }
+        @keyframes moving-box {
+            from {
+                left: 0px;
+                top: 0px;
+                background-color: red;
+            }
+            25% {
+                left: 500px;
+                top: 0px;
+                background-color: blue
+            }
+            50% {
+                left: 500px;
+                top: 500px;
+                background-color: green;
+            }
+            75% {
+                left: 0px;
+                top: 500px;
+                background-color: yellow;
+            }
+            to {
+                left: 0px;
+                top: 0px;
+                background-color: red;
+            }
+        }
+
+
+        .another-box {
+            position: relative;
+
+            height: 200px;
+            width: 200px;
+
+            border: 4px solid black;
+            background-color: black;
+
+            transition-property: width height;
+            transition-duration: 0.5s;
+
+        }
+        .another-box:hover {
+            width: 500px;
+        }
+
+
+        .button-clickme {
+            position: relative;
+
+            height: 100px;
+            width: 200px;
+
+            background-color: black;
+            color: white;
+            border: none;
+            
+            padding: 32px 16px;
+            font-size: 20px;
+            font-weight: bold;
+
+            transition-property: all;
+            transition-duration: 0.5s;
+        }
+        .button-clickme:hover {
+            background-color: #CFB87C;
+            color: black;
+            box-shadow: 4px 4px black;
+        }
+        .button-clickme:active {
+            background-color: red;
+            color: black;
+
+            transition-duration: 0s;
+        }
+    </style>
+</head>
+<body>
+    <!-- <div class="box"></div>
+    <div class="another-box"></div> -->
+
+    <button class="button-clickme">
+        <p>Click me!</p>
+    </button>
+
+    
+
+    <script>
+
+    </script>
+</body>
+</html>
