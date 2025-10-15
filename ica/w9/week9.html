@@ -94,6 +94,12 @@
 
             transition-duration: 0s;
         }
+        @media (prefers-reduced-motion: reduce) { /* Disable animation when user has reduced motion */
+            .button-clickme {
+                transition-property: none !important;
+                transition-duration: 0.001s !important; 
+            }
+        }
     </style>
 </head>
 <body>
