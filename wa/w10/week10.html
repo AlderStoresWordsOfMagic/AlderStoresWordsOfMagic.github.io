@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hyrule Compendium Test</title>
+    <link rel="stylesheet" href="week10.css">
+</head>
+<body>
+    <div class="app">
+        <header>What monster is this?</header>
+        <section class="quotes"></section> <!-- Dynamically generated content -->
+        <section class="controls">
+            <button type="button" id="js-new-entry" class="new-entry button" onClick="changeBG('darkslategray')">Generate a new monster!</button>
+            <button type="button" id="js-answer" class="answer button" onClick="changeBG('slategray')">Reveal the answer.</button>
+        </section>
+    </div>
+
+    <div class="misc">
+        <p>My extension to the quote API is to flip the question around. Now, you have to decipher the enemy based on the image, then it will provide you with a quote about that enemy. This is paired with some extra CSS flair and a bit of styling adjustment.</p>
+        <p>I could imagine using an API in my critique project to source the YouTube videos that would eventually be fed through a different algorithm. The API in question would do its best to pull from YouTube's repertoire of videos, and take in metadata pieces like title and author.</p>
+    </div>
+
+    <script src="week10.js"></script>
+</body>
+</html>
