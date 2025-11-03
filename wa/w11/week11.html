@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OpenLibrary API Test</title>
+    <link rel="stylesheet" href="week11.css">
+    
+</head>
+<body>
+    <div class="primary">
+        <!-- Primary application interaction -->
+        <div class="app">
+            <form name="searchbar">
+                <input type="text" id="js-search" placeholder="Search...">
+            </form>
+
+            <form name="submit-button">
+                <button type="button" id="js-submit" onclick="searchSubmit();">Submit</button>
+            </form>
+
+            <!-- Switch for name/ISBN -->
+            <label class="author-switch">
+                <input type="checkbox" name="author-toggle" id="js-author-toggle">
+                <span class="slider">Search Authors</span>
+            </label>
+
+            <!-- Show X-Y search results -->
+            <label class="result-counter">
+                <input type="number" id="js-result-counter" min="1" max="100" value="10" step="1" placeholder="How many results?" onchange="docCount = (resultCounter.valueAsNumber);"> Result Quantity</label>
+            </label>
+
+            <!-- Search results; auto-populated via JavaScript -->
+            <div class="results"></div>
+        </div>
+
+        <!-- Display the JSON being fetched; auto-populated via JavaScript -->
+        <div class="raw-json">
+            <div class="json-header">
+                <input type="checkbox" name="json-toggle" id="js-json-toggle">
+                <span class="slider">See JSON</span>
+            </div>
+            <div class="json-content" id="js-json-pane">
+                <p>When a query is submitted, this website transmits only the query to the API that it fetches its library data from, with modification based on the other forms of input provided. No personal data, or other kinds of data, are collected or stored long term. This box, if checked upon submission, will display the raw JSON output of the current search, showing all data that the site collects. This box may be very large. Uncheck it to return.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Prevent weird bugs involving DOM loading order by placing the script right at the end -->
+    <script src="week11.js"></script>
+</body>
+</html>
