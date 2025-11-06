@@ -23,13 +23,13 @@
             <!-- Switch for name/ISBN -->
             <label class="author-switch">
                 <input aria-labelledby="author-switch-text" type="checkbox" name="author-toggle" id="js-author-toggle" title="Toggle searching authors instead of books">
-                <span class="author-switch-text">Search Authors</span>
+                <span class="author-switch-text" id="author-switch-text">Search Authors</span>
             </label>
 
             <!-- Show X-Y search results -->
             <label class="result-counter">
                 <input aria-labelledby="result-counter-text" type="number" id="js-result-counter" min="1" max="100" value="10" step="1" placeholder="Results?" onchange="docCount = (resultCounter.valueAsNumber);">
-                <span class="result-counter-text">Search Result Counter</span>
+                <span class="result-counter-text" id="result-counter-text">Search Result Counter</span>
             </label>
 
             <!-- Search results; auto-populated via JavaScript -->
