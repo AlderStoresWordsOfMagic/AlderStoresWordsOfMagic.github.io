@@ -1,16 +1,3 @@
-
-
-
-// YOUTUBE API KEY: AIzaSyAjhjKeolN-DQeLeaN8ztuWhYfu1biu82E
-// EXAMPLE CHANNEL ID: UCQ9STd0zeHrrQGJQEuvhuTw (Bismuth)
-
-
-
-
-
-
-
-
 // Variable setup
 
 // Basics
