@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YouTube API Critique</title>
+    <link rel="stylesheet" href="week13.css">
+    
+</head>
+<body>
+    <script src="https://apis.google.com/js/api.js"></script> <!-- Part of implementing the YouTube API -->
+
+    <div class="primary">
+        <!-- Primary application interaction -->
+        <div class="app">
+            <form name="searchbar">
+                <input aria-label="Search bar" type="text" id="js-search" placeholder="Search..." title="Search YouTube">
+            </form>
+
+            <form name="submit-button">
+                <button aria-label="Submit search" type="button" id="js-submit" onclick="searchSubmit();">Submit</button>
+            </form>
+
+            <!-- Show X-Y search results -->
+            <label class="result-counter">
+                <input aria-labelledby="result-counter-text" type="number" id="js-result-counter" min="1" max="100" value="10" step="1" placeholder="How many videos to show?" onchange="docCount = (resultCounter.valueAsNumber);">
+                <span class="result-counter-text" id="result-counter-text">How many videos to show?</span>
+            </label>
+
+            <!-- Search results; auto-populated via JavaScript -->
+            <div class="results"></div>
+        </div>
+    </div>
+
+    <!-- Prevent weird bugs involving DOM loading order by placing the script right at the end -->
+    <script src="week13.js"></script>
+</body>
+</html>
